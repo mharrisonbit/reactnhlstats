@@ -8,6 +8,8 @@ export interface Standing {
   teamAbbrev: LocalizedString;
   teamName: LocalizedString;
   teamLogo: string;
+  teamCommonName?: LocalizedString;
+  teamPlaceName?: LocalizedString;
   gamesPlayed: number;
   wins: number;
   losses: number;
@@ -20,12 +22,21 @@ export interface StandingsResponse {
   standings: Standing[];
 }
 
+export interface GameTeam {
+  abbrev: string;
+  score?: number;
+  logo?: string;
+  commonName?: LocalizedString;
+  placeName?: LocalizedString;
+  [key: string]: unknown;
+}
+
 export interface Game {
   id: number;
   startTimeUTC: string;
   gameState: string;
-  awayTeam: { abbrev: string; score?: number; [key: string]: unknown };
-  homeTeam: { abbrev: string; score?: number; [key: string]: unknown };
+  awayTeam: GameTeam;
+  homeTeam: GameTeam;
   [key: string]: unknown;
 }
 export interface ScheduleResponse {
@@ -42,6 +53,7 @@ export interface RosterPlayer {
   lastName: LocalizedString;
   positionCode: string;
   sweaterNumber?: number;
+  headshot?: string;
   [key: string]: unknown;
 }
 export interface RosterResponse {

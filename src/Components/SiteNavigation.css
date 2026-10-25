@@ -1,0 +1,22 @@
+.site-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.875rem 1.5rem;
+  background: #10233f;
+}
+
+.site-navigation a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus-visible {
+  text-decoration: underline;
+}
+
+.site-navigation__brand {
+  font-size: 1.125rem;
+}

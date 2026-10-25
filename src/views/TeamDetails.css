@@ -1,0 +1,57 @@
+.team-details {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.team-details__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.team-details__logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+
+.team-details__header h1,
+.team-details__header p {
+  margin: 0;
+}
+
+.team-details__abbreviation {
+  color: #596579;
+  font-weight: 600;
+}
+
+.team-details__record,
+.team-details__roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: 1rem;
+}
+
+.team-details__record > div,
+.team-details__roster-group {
+  padding: 1rem;
+  border: 1px solid #d7dee8;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.team-details__record dt {
+  color: #596579;
+}
+
+.team-details__record dd {
+  margin: 0.375rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.team-details__roster ul {
+  padding-left: 1.25rem;
+}

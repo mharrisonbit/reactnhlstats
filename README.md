@@ -23,7 +23,7 @@ Flow: **View → ViewModel (hook) → Repository → Service → HttpClient**
 | `StatsService` | `https://api-web.nhle.com/` | Standings, schedule, scores, rosters, club stats, player landing |
 | `ScoresService` | `https://nhl-score-api.herokuapp.com/` | Latest scores |
 
-Base URLs live in [`src/api/config.ts`](src/api/config.ts). These are unofficial, undocumented APIs and may change; some may not send CORS headers, in which case a dev proxy or backend may be needed.
+Base URLs live in [`src/api/config.ts`](src/api/config.ts). These APIs do not send CORS headers, so in development requests go through a dev proxy ([`src/setupProxy.js`](src/setupProxy.js)) under `/proxy/*`. A production build would need its own proxy/backend.
 
 ## Getting started
 
